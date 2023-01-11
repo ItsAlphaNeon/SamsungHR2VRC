@@ -2,7 +2,7 @@ import threading
 import time
 import sendmessage
 import server
-from PyQt6 import QtWidgets, uic
+from PyQt6 import QtWidgets
 import sys
 from PyQt6.QtCore import QTimer, pyqtSignal, pyqtSlot
 
@@ -85,6 +85,7 @@ def sendHeartRate():
 
 
 if __name__ == "__main__":
+    """
     serverRunning = False
     portInput = 0000
 
@@ -93,6 +94,10 @@ if __name__ == "__main__":
 
     sendHeart = threading.Thread(target=sendHeartRate, daemon=True)  # TEMP
     sendHeart.start()
+
+
+"""
+    server.callStartServer(6547)
 
     while True:
         time.sleep(1)
